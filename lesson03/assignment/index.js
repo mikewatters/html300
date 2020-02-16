@@ -1,7 +1,7 @@
 //Start jquery
 $(document).ready(function() {
 
-// Create object from provided Data
+// Create object from provided data
 const bios = [
   { name: "Steve Smith",
     jobTitle: "Project Manager",
