@@ -1,0 +1,13 @@
+// Colors
+$darkgray: #444;
+$lightgray: #aaa;
+$gray: #999;
+$white: #fff;
+$black: #000;
+$pink: #c44e55;
+$lightpink: #e1a6aa;
+
+// Mixins
+@mixin for-phone-only {
+    @media (max-width: 600px) { @content; }
+}
