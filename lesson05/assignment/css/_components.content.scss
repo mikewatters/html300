@@ -1,3 +1,4 @@
+// General styles
 html {
     box-sizing: border-box;
 }
@@ -14,6 +15,7 @@ html {
     font-size: 1.5rem;
 }
 
+// Grid container
 .grid-container {
   display: grid;
   grid-gap: 0;
@@ -21,6 +23,7 @@ html {
   grid-template-rows: 1fr;
 }
 
+// Header box
 .header {
   background-color: $red;
   color: $white;
@@ -28,12 +31,14 @@ html {
   text-align: center;
 }
 
+// Style navigation container
 .nav {
   background-color: $green;
   color: $white;
   grid-column-start: span 3;
 }
 
+// Nav styled using flex within unordered list
 .nav ul {
     list-style: none;
     font-size: 1rem;
@@ -52,6 +57,7 @@ html {
   }
 }
 
+// Style sidebar - including mobile
 .sidebar {
   background-color: $purple;
   color: $white;
@@ -64,6 +70,7 @@ html {
   }
 }
 
+// Style main content box - including mobile
 .main-content {
   background-color: $orange;
   color: $white;
@@ -75,6 +82,7 @@ html {
   }
 }
 
+// Style footer
 .footer {
   background-color: $blue;
   color: $white;
