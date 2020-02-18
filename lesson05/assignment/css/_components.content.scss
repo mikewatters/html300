@@ -6,8 +6,78 @@ html {
 *:after,
 *:before {
     box-sizing: inherit;
+    padding: 2rem;
 }
 
 .main {
-    padding: 2rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.header {
+  background-color: $red;
+  color: $white;
+  grid-column-start: span 3;
+  text-align: center;
+}
+
+.nav {
+  background-color: $green;
+  color: $white;
+  grid-column-start: span 3;
+}
+
+.nav ul {
+    list-style: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    @include narrow {
+      display: block;
+      text-align: center;
+    }
+  & li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.sidebar {
+  background-color: $purple;
+  color: $white;
+  grid-column-start: span 1;
+  padding: 15rem 2rem;
+  text-align: center;
+  @include narrow {
+    grid-column-start: span 3;
+    padding: 5rem 2rem;
+  }
+}
+
+.main-content {
+  background-color: $orange;
+  color: $white;
+  grid-column-start: span 2;
+  padding: 15rem 2rem;
+  text-align: center;
+  @include narrow {
+    grid-column-start: span 3;
+  }
+}
+
+.footer {
+  background-color: $blue;
+  color: $white;
+  grid-column-start: span 3;
+  text-align: center;
 }

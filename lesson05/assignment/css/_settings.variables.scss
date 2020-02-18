@@ -1,1 +1,12 @@
 // Colors
+$white: #fff;
+$red: #e83329;
+$green: #7ACB00;
+$purple: #6E27C5;
+$orange: #FF6600;
+$blue: #150F96;
+
+// Mixins
+@mixin narrow {
+    @media (max-width: 750px) { @content; }
+}
