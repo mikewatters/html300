@@ -1,3 +1,4 @@
+// General styles
 html {
     box-sizing: border-box;
 }
@@ -6,8 +7,85 @@ html {
 *:after,
 *:before {
     box-sizing: inherit;
+    padding: 2rem;
 }
 
 .main {
-    padding: 2rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+// Grid container
+.grid-container {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+// Header box
+.header {
+  background-color: $red;
+  color: $white;
+  grid-column-start: span 3;
+  text-align: center;
+}
+
+// Style navigation container
+.nav {
+  background-color: $green;
+  color: $white;
+  grid-column-start: span 3;
+}
+
+// Nav styled using flex within unordered list
+.nav ul {
+    list-style: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    @include narrow {
+      display: block;
+      text-align: center;
+    }
+  & li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Style sidebar - including mobile
+.sidebar {
+  background-color: $purple;
+  color: $white;
+  grid-column-start: span 1;
+  padding: 15rem 2rem;
+  text-align: center;
+  @include narrow {
+    grid-column-start: span 3;
+    padding: 5rem 2rem;
+  }
+}
+
+// Style main content box - including mobile
+.main-content {
+  background-color: $orange;
+  color: $white;
+  grid-column-start: span 2;
+  padding: 15rem 2rem;
+  text-align: center;
+  @include narrow {
+    grid-column-start: span 3;
+  }
+}
+
+// Style footer
+.footer {
+  background-color: $blue;
+  color: $white;
+  grid-column-start: span 3;
+  text-align: center;
 }
