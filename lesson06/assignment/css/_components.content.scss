@@ -11,3 +11,28 @@ html {
 .main {
     padding: 2rem;
 }
+
+.feature-area {
+  width: 85%;
+  float: right;
+@include narrow {
+  width: 100%;
+  float: none;
+}
+}
+
+.side-nav {
+  padding: 0 0.5rem 0 0; }
+
+.nav-item {
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+.footer {
+  width: 100%;
+  background-color: $darkgray;
+  color: $white;
+  padding: 1rem;
+  text-align: center;
+  clear: both;
+}

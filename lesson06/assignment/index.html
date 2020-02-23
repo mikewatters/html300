@@ -1,20 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <!-- Stylsheets and Bootstrap CSS -->
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <title>Assignment 06 - Bootstrap 4</title>
-    </head>
-    <body>
-        <main class="main">
-          <!-- jQuery, Popper, and Bootstrap -->
-          <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        </main>
-    </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- Stylsheets and Bootstrap CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Assignment 06 - Bootstrap 4</title>
+</head>
+<body>
+  <main class="main">
+    <!-- Global header -->
+    <div class="alert alert-secondary text-uppercase text-center" role="alert"><strong>Workers' compensation for Oregon | 800.555.5555</strong></div>
+    <!-- Main navigation -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+      <!-- Logo and hamburger menu -->
+      <a class="navbar-brand mb-0 h1" href="index.html">saif</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Nav items and dropdowns aligning to right -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="employer-guide.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Employer</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">File a claim</a>
+              <a class="dropdown-item" href="#">File payroll</a>
+              <a class="dropdown-item" href="#">Pay online</a>
+              <a class="dropdown-item" href="#">Get certificate</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Employer Guide</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="employer-guide.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Worker</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Check claim status</a>
+              <a class="dropdown-item" href="#">File reimbursement</a>
+              <a class="dropdown-item" href="#">Contact adjuster</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Worker Guide</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="employer-guide.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Agent</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Quote a business</a>
+              <a class="dropdown-item" href="#">Action 2</a>
+              <a class="dropdown-item" href="#">Action 3</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Agent Guide</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="employer-guide.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Medical provider</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action 1</a>
+              <a class="dropdown-item" href="#">Action 2</a>
+              <a class="dropdown-item" href="#">Action 3</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Medical Provider Guide</a>
+            </div>
+          </li>
+          <li class="nav-item"><button class="btn btn-outline-success" type="button">Search</button>
+          </li>
+          <li class="nav-item"><button class="btn btn-warning" type="button">Get a quote</button>
+          </li>
+          <li class="nav-item"><button class="btn btn-danger" type="button">Log in</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Featured content -->
+    <div class="feature-area">
+      <img src="/images/storyblocks-flowers-in-a-garden-against-blue-sky.jpg" class="img-fluid" alt="sunflowers in a garden against a blue sky">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Featured topic: Let's talk about it</h1>
+          <p class="lead">Support a well-being culture at your workplace by encouraging use of resources.</p>
+          <hr class="my-4">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <!-- Secondary navigation -->
+    <div class="side-nav">
+      <ul class="nav flex-sm-column">
+        <li class="nav-item">
+          <a class="nav-link disabled text-uppercase"><strong>Resources</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Safety</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Training</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Get covered</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Find a form</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About SAIF</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Careers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Newsroom</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+      <p>Footer info. In id libero purus. Fusce id congue magna, id feugiat velit. Ut feugiat tincidunt pretium.</p>
+    </div>
+    <!-- jQuery, Popper, and Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </main>
+</body>
+
 </html>
