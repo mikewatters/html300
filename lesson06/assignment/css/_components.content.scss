@@ -1,3 +1,4 @@
+// General styling
 html {
     box-sizing: border-box;
 }
@@ -12,22 +13,30 @@ html {
     padding: 2rem;
 }
 
+// Style featured area
 .feature-area {
   width: 85%;
   float: right;
+  padding: 2rem 0rem 2rem 2rem;
 @include narrow {
   width: 100%;
   float: none;
 }
 }
 
-.side-nav {
-  padding: 0 0.5rem 0 0; }
+// Add some margin to images
+.float-right {
+  margin: 0 1rem 1rem;
+}
 
+// Style vertical navigation
+.side-nav {
+  padding: 1rem 0.5rem 0 0; }
 .nav-item {
   margin: 0 0.5rem 0.5rem 0;
 }
 
+// Style footer
 .footer {
   width: 100%;
   background-color: $darkgray;

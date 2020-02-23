@@ -10,14 +10,20 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <title>Assignment 06 - Bootstrap 4</title>
 </head>
+
 <body>
   <main class="main">
-    <!-- Global header -->
-    <div class="alert alert-secondary text-uppercase text-center" role="alert"><strong>Workers' compensation for Oregon | 800.555.5555</strong></div>
+    <!-- Alert for html300 instructor -->
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Use the side navigation for assignment 6!</strong> The top navigation is a proof of concept for work and all links have been disabled.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
     <!-- Main navigation -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
       <!-- Logo and hamburger menu -->
-      <a class="navbar-brand mb-0 h1" href="index.html">saif</a>
+      <a class="navbar-brand mb-0 h1" href="index.html">My company</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -27,42 +33,42 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="employer-guide.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Employer</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">File a claim</a>
-              <a class="dropdown-item" href="#">File payroll</a>
-              <a class="dropdown-item" href="#">Pay online</a>
-              <a class="dropdown-item" href="#">Get certificate</a>
+              <a class="dropdown-item disabled" href="#">File a claim</a>
+              <a class="dropdown-item disabled" href="#">File payroll</a>
+              <a class="dropdown-item disabled" href="#">Pay online</a>
+              <a class="dropdown-item disabled" href="#">Get certificate</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Employer Guide</a>
+              <a class="dropdown-item disabled" href="#">Employer Guide</a>
             </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="employer-guide.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Worker</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Check claim status</a>
-              <a class="dropdown-item" href="#">File reimbursement</a>
-              <a class="dropdown-item" href="#">Contact adjuster</a>
+              <a class="dropdown-item disabled" href="#">Check claim status</a>
+              <a class="dropdown-item disabled" href="#">File reimbursement</a>
+              <a class="dropdown-item disabled" href="#">Contact adjuster</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Worker Guide</a>
+              <a class="dropdown-item disabled" href="#">Worker Guide</a>
             </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="employer-guide.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Agent</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Quote a business</a>
-              <a class="dropdown-item" href="#">Action 2</a>
-              <a class="dropdown-item" href="#">Action 3</a>
+              <a class="dropdown-item disabled" href="#">Quote a business</a>
+              <a class="dropdown-item disabled" href="#">Action 2</a>
+              <a class="dropdown-item disabled" href="#">Action 3</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Agent Guide</a>
+              <a class="dropdown-item disabled" href="#">Agent Guide</a>
             </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="employer-guide.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Medical provider</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action 1</a>
-              <a class="dropdown-item" href="#">Action 2</a>
-              <a class="dropdown-item" href="#">Action 3</a>
+              <a class="dropdown-item disabled" href="#">Action 1</a>
+              <a class="dropdown-item disabled" href="#">Action 2</a>
+              <a class="dropdown-item disabled" href="#">Action 3</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Medical Provider Guide</a>
+              <a class="dropdown-item disabled" href="#">Medical Provider Guide</a>
             </div>
           </li>
           <li class="nav-item"><button class="btn btn-outline-success" type="button">Search</button>
@@ -90,28 +96,34 @@
     <div class="side-nav">
       <ul class="nav flex-sm-column">
         <li class="nav-item">
-          <a class="nav-link disabled text-uppercase"><strong>Resources</strong></a>
+          <a class="nav-link" href="images.html">Images</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Safety</a>
+          <a class="nav-link" href="accordian.html">Accordian</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Training</a>
+          <a class="nav-link" href="grid.html">Grid system</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Get covered</a>
+          <a class="nav-link disabled" href="#">Safety</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Find a form</a>
+          <a class="nav-link disabled" href="#">Training</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About SAIF</a>
+          <a class="nav-link disabled" href="#">Get covered</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Careers</a>
+          <a class="nav-link disabled" href="#">Find a form</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Newsroom</a>
+          <a class="nav-link disabled" href="#">About SAIF</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Careers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Newsroom</a>
         </li>
       </ul>
     </div>
