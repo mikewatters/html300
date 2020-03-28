@@ -15,30 +15,16 @@
     </b-button>
   </p>
 
-  <!-- Cat slideshow -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div v-for="carousel in carousels" class="carousel-item active">
-          <img class="d-block w-100" :src="carousel.src" :alt="carousel.alt">
-          <div class="carousel-caption d-none d-md-block">
-            <h5> {{ carousel.title }}</h5>
-            <p> {{ carousel.caption }}</p>
-          </div>
-        </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+  <!-- Cat image cards -->
+  <div class="card-columns">
+  <div v-for="card in cards" class="card bg-light text-white">
+    <img :src="card.src" class="card-img" alt="alt.src">
+    <div class="card-img-overlay">
+      <h5 class="card-title">{{ card.title }}</h5>
+      <p class="card-text">{{ card.caption }}</p>
     </div>
+  </div>
+  </div>
   </div>
 </main>
 </template>
@@ -51,24 +37,28 @@ const image3 = require('../assets/cats3.jpg');
 export default {
   data() {
     return {
-      carousels: [{
-        src: image1,
-        alt: 'gray cat with blue eyes',
-        title: 'This is one of my favorite cats',
-        caption: 'Because cute!'
-      },
-      {
-        src: image2,
-        alt: 'kitten with flowers',
-        title: 'Flowers',
-        caption: 'Go well with cats'
-      },
-      {
-        src: image3,
-        alt: 'domestic longhair tabby cat',
-        title: 'Hey',
-        caption: 'Cattastic'
-      }],
+      cards: [{
+          id: 1,
+          src: image1,
+          alt: 'gray cat with blue eyes',
+          title: 'This is one of my favorite cats',
+          caption: 'Because cute!'
+        },
+        {
+          id: 2,
+          src: image2,
+          alt: 'kitten with flowers',
+          title: 'Flowers',
+          caption: 'Go well with cats',
+        },
+        {
+          id: 3,
+          src: image3,
+          alt: 'domestic longhair tabby cat',
+          title: 'Hey',
+          caption: 'Cattastic',
+        }
+      ],
     }
   }
 }
