@@ -1,10 +1,14 @@
 <template>
   <div id="app">
+  <app-header>
+  <h1 slot="slot1">Parent line 1</h1>
+  <h2 slot="slot2">Parent line 2</h2>
+  </app-header>
 
   <!-- Main navigation -->
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
     <!-- Logo and hamburger menu -->
-    <a class="navbar-brand mb-0 h1" href="index.html">Wild cats</a>
+    <a class="navbar-brand mb-0 h1" href="index.html"><span class="logo">Wild cats</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -50,7 +54,7 @@
     <div class="col-sm-2">
     <ul class="nav flex-sm-column">
       <li class="nav-item">
-        <router-link to="/images" class="nav-link">Favorite cats</router-link>
+        <router-link to="/images" class="nav-link">Favorite cats and images</router-link>
       </li>
       <li class="nav-item">
         <router-link to="/accordion" class="nav-link">Information about cats</router-link>
@@ -80,18 +84,31 @@
 </template>
 
 <script>
+import Header from './components/app-header.vue';
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+  Header
+  }
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Flavors&display=swap');
 #app {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-size: 1.1rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   }
-
+.logo {
+font-family: 'Flavors', cursive;
+font-size: 4rem;
+}
+.btn {
+font-size: 1.25rem;
+}
 .container {
   width: 95%;
   margin: 1rem;

@@ -1,40 +1,16 @@
-<template>
-<!-- Featured content -->
-<main>
-  <!-- Intro content -->
-  <h1>Cats are amazing</h1>
-  <img src="../assets/cats5.jpg" alt="..." class="float-right">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <!-- Popover -->
-  <p>
-    <b-button class="btn-success" v-b-popover.hover.top="'This is the best place to learn about cats'" title="Cats galore">
-      Did you know?
-    </b-button>
-  </p>
-
-  <!-- Cat image cards -->
-  <div class="card-columns">
-  <div v-for="card in cards" class="card bg-light text-white">
-    <img :src="card.src" class="card-img" alt="alt.src">
-    <div class="card-img-overlay">
-      <h5 class="card-title">{{ card.title }}</h5>
-      <p class="card-text">{{ card.caption }}</p>
-    </div>
-  </div>
-  </div>
-  </div>
-</main>
-</template>
-
 <script>
+import Card from './card.vue';
+
+// Paths for images
 const image1 = require('../assets/cats1.jpg');
 const image2 = require('../assets/cats2.jpg');
 const image3 = require('../assets/cats3.jpg');
 
+// Image data
 export default {
+  components: {
+    Card
+  },
   data() {
     return {
       cards: [{
@@ -63,6 +39,30 @@ export default {
   }
 }
 </script>
+
+<template>
+<!-- Featured content -->
+<main>
+  <!-- Intro content -->
+  <h1>Cats are amazing</h1>
+  <img src="../assets/cats5.jpg" alt="..." class="float-right">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <!-- Popover -->
+  <p>
+    <b-button class="btn-success" v-b-popover.hover.top="'This is the best place to learn about cats'" title="Cats galore">
+      Did you know?
+    </b-button>
+  </p>
+  <!-- Image content goes here -->
+  <section class="card-columns" v-if="cards">
+    <card v-for="card in cards" v-bind:card="card" v-bind:key="card.id"></card>
+  </section>
+
+</main>
+</template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
