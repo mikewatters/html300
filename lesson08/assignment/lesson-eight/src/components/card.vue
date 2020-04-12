@@ -1,16 +1,14 @@
 <script>
 //Prop validation for component
 export default {
-    name: 'card',
-    props: {
-        card: Object,
-            default: function () {
-                return {}
-            }
-
+  name: 'card',
+  props: {
+    card: Object,
+    default: function() {
+      return {}
     }
+  }
 }
-
 </script>
 
 <template>
@@ -22,6 +20,8 @@ export default {
     <p class="card-text">{{ card.caption }}</p>
   </div>
 </div>
-</div>
-
 </template>
+
+<style scoped>
+
+</style>
